@@ -10,8 +10,9 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, FONTS, icons, images, SIZES } from '../constant';
+import { PlantsDetail } from './PlantsDetail';
 
-const Home = () => {
+const Home = ({navigation}) => {
   // Dummy Data
   const [newPlants, setnewPlants] = React.useState([
     {
@@ -249,7 +250,7 @@ const Home = () => {
               <TouchableOpacity
                 style={{ flex: 1 }}
                 onPress={() => {
-                  console.log('Pressed...');
+                  navigation.navigate('PlantsDetail')
                 }}>
                 <Image
                   source={require('../assets/images/plant_5.jpg')}
@@ -261,7 +262,7 @@ const Home = () => {
               <TouchableOpacity
                 style={{ flex: 1 }}
                 onPress={() => {
-                  console.log('Pressed...');
+                  navigation.navigate('PlantsDetail')
                 }}>
                 <Image
                   source={require('../assets/images/plant_6.jpg')}
@@ -281,7 +282,7 @@ const Home = () => {
                 <TouchableOpacity
                   style={{ flex: 1 }}
                   onPress={() => {
-                    console.log('Pressed...');
+                    navigation.navigate('PlantsDetail')
                   }}>
                   <Image
                     source={require('../assets/images/plant_7.jpg')}
